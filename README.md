@@ -4,5 +4,4 @@ A FLASK WEBSITE ON B-TREE with visualization of insert,delete functions and real
 
 Libraries Used:Python,Flask,HTML,BeautifulSoup,URLlib,Graphviz
 
-SETUP:
-install all these libraries and give flask run
+SETUP: Install all these libraries and do flask run
