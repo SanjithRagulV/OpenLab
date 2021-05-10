@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+  <title>Home</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}"  type="image/png">
+</head>
+
+<body>
+<header class="navigationheader flex-gap">
+    <nav>
+        <h1> <a href="/" class="atitle">B-TREE DOCS</a> </h1>
+        <ul>
+            <li><a class="iteminnavigation " href="/">Home</a></li>
+            <li> <a class="iteminnavigation" href="/home">Morse Docs</a></li>
+            <li> <a class="iteminnavigation" href="/morse">Morse</a></li>
+            <li> <a class="iteminnavigation" href="/ws">B-Tree Docs</a></li>
+        </ul>
+    </nav>
+</header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <div class="home">
+        <h1 class="MorseHeading">{{d['title']}}</h1>
+        <p class="Morsepara">{{d['intro']}}</p>
+        <h3 class="Morsepara">Properties</h3>
+        <ul class="Morsepara">
+            <li>{{d['properties'][0]}}</li>
+            <li>{{d['properties'][1]}}</li>
+            <li>{{d['properties'][2]}}</li>
+            <li>{{d['properties'][3]}}</li>
+        </ul>
+        <h1 class="MorseHeading">{{d['title2']}}</h1>
+        <p class="Morsepara">{{d['intro2']}}</p>
+        <h3 class="Morsepara">ALGORITHM:INSERT</h3>
+        <p class="Morsepara">{{d['ALGORITHM:INSERT']}}</p>
+        <h1 class="MorseHeading">{{d['title3']}}</h1>
+        <p class="Morsepara">{{d['intro3']}}</p>
+        <h3 class="Morsepara">ALGORITHM:DELETE</h3>
+        <p class="Morsepara">{{d['ALGORITHM:DELETE']}}</p>
+        <h1 class="MorseHeading">{{d['title4']}}</h1>
+        <p class="Morsepara">{{d['intro4']}}</p>
+        <h3 class="Morsepara">ALGORITHM:SEARCH</h3>
+        <p class="Morsepara">{{d['ALGORITHM:SEARCH']}}</p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}"  type="image/png">
+    <style>
+        .center{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+        }
+        .b{
+        padding:15px;
+        display:flex;
+        justify-content:center;
+        }
+    </style>
+</head>
+<body>
+<header class="navigationheader flex-gap">
+    <nav>
+        <h1> <a href="/" class="atitle">B-TREE</a> </h1>
+        <ul>
+            <li><a class="iteminnavigation " href="/">Home</a></li>
+            <li> <a class="iteminnavigation" href="/home">Morse Docs</a></li>
+            <li> <a class="iteminnavigation" href="/morse">Morse</a></li>
+            <li> <a class="iteminnavigation" href="/ws">B-Tree Docs</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="cardMorse"">
+        <div class="b">
+        <form name="passdata" action="./insert" method="post" id="form1">
+            <label for="insert">
+                INSERT
+            </label>
+            <input class="morseinput" type="number" id="insert" name="it" placeholder="insert">
+        </form>
+        <button  class="btn btn-dark button" type="submit" form="form1">
+                INSERT
+        </button>
+        </div>
+        <div class="b">
+        <form name="passdata" action="./delete" method="post" id="form2">
+            <label for="delete">
+                DELETE
+            </label>
+            <input class="morseinput" type="number" id="delete" name="dt" placeholder="delete">
+        </form>
+        <button  class="btn btn-dark button" type="submit" form="form2">
+                DELETE
+        </button>
+        </div>
+        <div class="b">
+        <form name="passdata" action="./search" method="post" id="form3">
+            <label for="search">
+                FIND
+            </label>
+            <input class="morseinput" type="number" id="search" name="st" placeholder="search">
+        </form>
+        <button  class="btn btn-dark button" type="submit" form="form3">
+                FIND
+        </button>
+        </div>
+        <hr>
+        <div class="b">
+            <h6>No Element is not present</h6>
+        </div>
+        <hr>
+        <div class="b">
+            <img id="test" src="{{url_for('static', filename='btree.gv.jpeg')}}"></img>
+        </div>
+        <script>
+            var timestamp = new Date().getTime();
+            var el = document.getElementById("test");
+            el.src = "{{url_for('static', filename='btree.gv.jpeg')}}?t=" + timestamp;
+            function refreshImage(imgElement, imgURL){
+                         // create a new timestamp
+                     var timestamp = new Date().getTime();
+                    var el = document.getElementById(imgElement);
+                    var queryString = "?t=" + timestamp;
+                    el.src = imgURL + queryString;
+                }
+        </script>
+    </div>
+
+</body>
+</html>

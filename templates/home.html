@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+  <title>Home</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}"  type="image/png">
+</head>
+
+<body>
+<header class="navigationheader">
+    <nav>
+        <h1> <a href="/" class="atitle">MORSE THEORY</a> </h1>
+        <ul>
+            <li><a class="iteminnavigation " href="/">Home</a></li>
+            <li> <a class="iteminnavigation" href="/home">Morse Docs</a></li>
+            <li> <a class="iteminnavigation" href="/morse">Morse</a></li>
+            <li> <a class="iteminnavigation" href="/ws">B-Tree Docs</a></li>
+        </ul>
+    </nav>
+</header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <div class="home">
+        <h1 class="MorseHeading">Morse Code</h1>
+        <p class="Morsepara">Morse code is a method used in telecommunication to encode text characters as standardized sequences of two different signal duration called dots and dashes.
+            In our project we have implemented two features. First one is where we convert string to morse code and the second one is converting morse code to string.
+            We used morse code conversion in our project because morse code contains dots and dashes which can easily represented in a binary tree.
+            In the binary tree which we contstructed the left traversal represent dots and the right traversal represent dash. For example,</p>
+         <p> </p>
+         <p class="Morsepara">
+            <br>
+            a) -.... represents 6
+            <br>
+            b) .-.. represents L
+            <br>
+            c) ..-. represents F
+         </p>
+          
+            <div class="Morse">
+                <img class="Morseimage" src="{{url_for('static', filename='MorseCode.jpeg')}}" alt="">
+            </div>
+            
+    </div>
+</body>
+</html>

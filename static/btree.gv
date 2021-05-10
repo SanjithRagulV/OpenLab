@@ -1,0 +1,8 @@
+digraph g {
+	node [height=.1 shape=record]
+	node2 [label=12]
+	node3 [label="3|4"]
+	node2 -> node3
+	node4 [label=14]
+	node2 -> node4
+}
